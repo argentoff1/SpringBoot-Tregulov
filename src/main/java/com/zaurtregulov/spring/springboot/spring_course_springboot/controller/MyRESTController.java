@@ -2,7 +2,6 @@ package com.zaurtregulov.spring.springboot.spring_course_springboot.controller;
 
 import com.zaurtregulov.spring.springboot.spring_course_springboot.entity.Employee;
 import com.zaurtregulov.spring.springboot.spring_course_springboot.service.EmployeeService;
-import com.zaurtregulov.spring.springboot.spring_course_springboot.service.EmployeeServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +20,7 @@ public class MyRESTController {
         return allEmployees;
     }
 
-    /*@GetMapping("/employees/{id}")
+    @GetMapping("/employees/{id}")
     public Employee getEmployee(@PathVariable int id) {
         Employee employee = employeeService.getEmployee(id);
 
@@ -48,5 +47,5 @@ public class MyRESTController {
 
         employeeService.deleteEmployee(id);
         return "Employee with ID = " + id + " was deleted";
-    }*/
+    }
 }
